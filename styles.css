@@ -31,7 +31,7 @@ img { width: 100%; }
 
 .navbar {
   background: #489196;
-  padding: 1em 2em;
+  padding: 0 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,8 +47,17 @@ img { width: 100%; }
   display: flex;
 }
 
-.navbar__links li:not(:first-child) {
-  margin-left: 1em;
+.navbar__links li {
+  transition: .7s ease-in;
+}
+
+.navbar__links li:hover {
+  background: #62c1c8;
+}
+.navbar__links li a {
+  display: block;
+  padding: 0 1em;
+  line-height: 66px;
 }
 
 .center {
@@ -66,7 +75,11 @@ img { width: 100%; }
   border-radius: 10px;
   text-transform: uppercase;
   box-shadow: 0px 4px 9px rgba(72,145,150, 0.5);
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
 }
+
+.btn:hover { transform: scale(1.15) }
 
 .cards {
   display: grid;
@@ -82,7 +95,11 @@ img { width: 100%; }
   height: 150px;
   text-align: center;
   color: white;
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
 }
+
+.card:hover { transform: scale(1.05) }
 
 .card__body {
   margin-top: 4.5em;
